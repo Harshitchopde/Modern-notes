@@ -34,7 +34,6 @@ class MainActivity extends AppCompatActivity implements View.OnClickListener {
     private ActivityMainBinding binding;
     FloatingActionButton FabMain, Fab1, Fab2, Fab3;
     ConstraintLayout fablaout;
-    DataBaseHelper dbhelper;
     Float translationY = 100f;
     Fab_control fab_control;
 
@@ -55,7 +54,6 @@ class MainActivity extends AppCompatActivity implements View.OnClickListener {
         NavigationView navigationView = binding.navView;
         initFabMain();
         fab_control = new Fab_control(FabMain, Fab1, Fab2, Fab3,fablaout);
-        dbhelper = dbhelper.getDB(getApplicationContext());
         // Passing each menu ID as a set of Ids because each
         // menu should be considered as top level destinations.
         mAppBarConfiguration = new AppBarConfiguration.Builder(

@@ -41,13 +41,6 @@ class RecycleViewHomeAdapter extends RecyclerView.Adapter<RecycleViewHomeAdapter
     private
     OnNotesClickListener onNotesClickListener;
 
-    RecycleViewHomeAdapter(Context context, ArrayList<Notes> arrayNotes, DataBaseHelper dataBaseHelper, Toolbar toolbar) {
-        this.arrayNotes = arrayNotes;
-        this.context = context;
-        this.dataBaseHelper = dataBaseHelper;
-        this.toolbar = toolbar;
-
-    }
     public
     RecycleViewHomeAdapter(Context context, ArrayList<Notes> arrayNotes, DataBaseHelper dataBaseHelper,OnNotesClickListener onNotesClickListener) {
         this.arrayNotes = arrayNotes;
@@ -94,28 +87,6 @@ holder.llout.setOnLongClickListener(new View.OnLongClickListener() {
         return true;
     }
 });
-
-//        holder.textWord.setOnLongClickListener(new View.OnLongClickListener() {
-//            @SuppressLint("ResourceAsColor")
-//            @Override
-//            public
-//            boolean onLongClick(View v) {
-//                // check point do not pass getapplcation contxt  other wise it give null point exception
-////                Toast.makeText(context, "cl", Toast.LENGTH_SHORT).show();
-////                deleteHolder(position);
-//
-//                model.setSelected(!model.isSelected());
-//                // below is for custom colour
-////                holder.llout.setBackgroundColor(model.isSelected() ? ContextCompat.getColor(context,R.color.purple_500) : Color.WHITE);
-//
-//                holder.llout.setBackgroundColor(model.isSelected() ?Color.LTGRAY : Color.WHITE);
-//
-//
-//                return true;
-//            }
-//
-//
-//        });
 
 
 //        holder.ishare.setOnClickListener(new View.OnClickListener() {
@@ -177,23 +148,6 @@ public void deletingNode(Notes note,int pos){
 
 
 }
-//    public
-//    void deleteHolder(int pos) {
-//        AlertDialog alertDia = new AlertDialog.Builder(context)
-//                .setTitle("Delete")
-//                .setMessage("Are you sure want to delete")
-//                .setPositiveButton("Yes", new DialogInterface.OnClickListener() {
-//                    @Override
-//                    public
-//                    void onClick(DialogInterface dialog, int which) {
-//                        dataBaseHelper.notesDAO().deleteNotes(new Notes(arrayNotes.get(pos).getId(), arrayNotes.get(pos).getWord(), arrayNotes.get(pos).getMeaning()));
-//                        ( context).showNotes();
-//
-//                    }
-//                })
-//                .setNegativeButton("No", null)
-//                .show();
-//    }
 
 
 
